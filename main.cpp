@@ -21,10 +21,10 @@ int main()
  //It inputs commands as : command op1 op2
  //You should modify it to work for your implementation.
  //
- Shell shell =Shell("diskdata.txt",256,128);
- Table table = Table("diskdata.txt",256,128,"flatfile","indexfile");
+ Shell shell = Shell("diskdata.txt",256,128);
+ //Table table = Table("diskdata.txt",256,128,"flatfile","indexfile");
 
- table.build_table("records.txt");
+ //table.build_table("records.txt");
 
  string s;
  string command="go";
