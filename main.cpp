@@ -21,14 +21,14 @@ int main()
  //It inputs commands as : command op1 op2
  //You should modify it to work for your implementation.
  //
- Shell shell = Shell("diskdata.txt",256,128);
+ Shell shell = Shell("diskdata.txt", 256, 128);
  //Table table = Table("diskdata.txt",256,128,"flatfile","indexfile");
 
  //table.build_table("records.txt");
 
  string s;
- string command="go";
- string op1,op2;
+ string command = "go";
+ string op1, op2;
  
 
  while (command != "quit")
@@ -39,17 +39,17 @@ int main()
        cout << "$";
 
        getline(cin,s);
-       int firstblank=s.find(' ');
+       int firstblank = s.find(' ');
 
        if (firstblank < s.length()) s[firstblank]='#';
 
-       int secondblank=s.find(' ');
+       int secondblank = s.find(' ');
        command=s.substr(0,firstblank);
 
        if (firstblank < s.length())
-         op1=s.substr(firstblank+1,secondblank-firstblank-1);
+         op1 = s.substr(firstblank+1,secondblank-firstblank-1);
        if (secondblank < s.length())
-         op2=s.substr(secondblank+1);
+         op2 = s.substr(secondblank+1);
        if (command=="dir")
           {
             shell.dir();
@@ -75,11 +75,7 @@ int main()
           {
             table.search(op1);
           }
-       
       }
 
  return 0;
 }
-
-
-
